@@ -16,8 +16,11 @@ class _LandingPageState extends State<LandingPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            FractionallySizedBox(
-                widthFactor: 0.5, child: Image.asset('assets/logo.png')),
+            Hero(
+              tag: 'logo',
+              child: FractionallySizedBox(
+                  widthFactor: 0.5, child: Image.asset('assets/logo.png')),
+            ),
             Text(
               'McLaren Chat',
               style: TextStyle(color: Colors.blue, fontSize: 30),
