@@ -28,30 +28,40 @@ class _LandingPageState extends State<LandingPage> {
                 style: TextStyle(color: Colors.blue, fontSize: 30),
                 textAlign: TextAlign.center,
               ),
-              FlatButton(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10.0)),
-                color: Colors.blue,
-                child: Text(
-                  'Login',
-                  style: TextStyle(fontSize: 21, color: Colors.white),
+              Container(
+                width: MediaQuery.of(context).size.width * 0.8,
+                height: MediaQuery.of(context).size.height * 0.08,
+                margin: EdgeInsets.all(6),
+                child: FlatButton(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0)),
+                  color: Colors.blue,
+                  child: Text(
+                    'Login',
+                    style: TextStyle(fontSize: 21, color: Colors.white),
+                  ),
+                  onPressed: () {
+                    Navigator.push((context),
+                        MaterialPageRoute(builder: (context) => SignInPage()));
+                  },
                 ),
-                onPressed: () {
-                  Navigator.push((context),
-                      MaterialPageRoute(builder: (context) => SignInPage()));
-                },
               ),
-              FlatButton(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10.0)),
-                color: Colors.purple,
-                onPressed: () {
-                  Navigator.push((context),
-                      MaterialPageRoute(builder: (context) => SignUpPage()));
-                },
-                child: Text(
-                  'Register',
-                  style: TextStyle(fontSize: 21, color: Colors.white),
+              Container(
+                margin: EdgeInsets.all(6),
+                width: MediaQuery.of(context).size.width * 0.8,
+                height: MediaQuery.of(context).size.height * 0.08,
+                child: FlatButton(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0)),
+                  color: Colors.purple,
+                  onPressed: () {
+                    Navigator.push((context),
+                        MaterialPageRoute(builder: (context) => SignUpPage()));
+                  },
+                  child: Text(
+                    'Register',
+                    style: TextStyle(fontSize: 21, color: Colors.white),
+                  ),
                 ),
               )
             ],
