@@ -63,7 +63,7 @@ class _LandingPageState extends State<LandingPage> {
                     style: TextStyle(fontSize: 21, color: Colors.white),
                   ),
                 ),
-              )
+              ),
             ],
           ),
         ),
